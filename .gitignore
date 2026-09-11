@@ -1,0 +1,22 @@
+# LaTeX temporary/build files
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.figlist
+*.makefile
+*.auxlock
+*.pdf
