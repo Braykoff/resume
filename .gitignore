@@ -20,3 +20,8 @@
 *.makefile
 *.auxlock
 *.pdf
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
