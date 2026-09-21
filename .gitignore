@@ -25,3 +25,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Environment files
+.env*
+!.env.example
+
+# OS Files
+.DS_Store
