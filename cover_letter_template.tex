@@ -1,0 +1,86 @@
+% !TEX TS-program = Secret-pdfLaTeX
+%-------------------------
+% Cover letter template
+% Author : Brendan Raykoff
+% License : MIT
+%------------------------
+% Contact info is filled in at build time from a local .env file by
+% secret-latex (https://github.com/braykoff/secret-latex).
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\raggedright
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------------------------
+%%%%%%  LETTER STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape  Brendan Raykoff} \\ \vspace{1pt}
+    \small {{ secret.PHONE_NUMBER:XXX-XXX-XXXX }} $|$ \href{{{ secret.EMAIL }}}{\underline{{{ secret.EMAIL:brendan [dot] raykoff [at] berkeley [dot] edu }}}} $|$
+    \href{https://linkedin.com/in/brendan-raykoff}{\underline{linkedin.com/in/brendan-raykoff}}
+\end{center}
+
+\vspace{1em}
+
+%----------LETTER----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+\today
+
+%----------TODO: RECIPIENT NAME----------
+\textbf{Recipient Name} \\
+Company Name \\
+123 Street Address \\
+City, ST 12345
+
+\vspace{0.15in}
+
+Dear Hiring Manager,
+
+%----------TODO: CONTENT----------
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+
+%----------SIGNATURE----------
+\textbf{Sincerely,} \\[0.14in]
+\includegraphics[height=0.42in]{signature.png} \\[0.02in]
+\textbf{Brendan Raykoff}
+
+\end{document}
