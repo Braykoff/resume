@@ -1,9 +1,12 @@
+% !TEX TS-program = Secret-pdfLaTeX
 %-------------------------
 % Resume in Latex
 % Author : Brendan Raykoff
 % Based off of: https://github.com/jakegut/resume
 % License : MIT
 %------------------------
+% Contact info is filled in at build time from a local .env file by
+% secret-latex (https://github.com/braykoff/secret-latex).
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -109,7 +112,7 @@
 
 \begin{center}
     \textbf{\Huge \scshape  Brendan Raykoff} \\ \vspace{1pt}
-    \small XXX-XXX-XXXX $|$ \href{brendan [dot] raykoff [at] berkeley [dot] edu}{\underline{brendan [dot] raykoff [at] berkeley [dot] edu}} $|$ 
+    \small {{ secret.PHONE_NUMBER:XXX-XXX-XXXX }} $|$ \href{{{ secret.EMAIL }}}{\underline{{{ secret.EMAIL:brendan [dot] raykoff [at] berkeley [dot] edu }}}} $|$
     \href{https://linkedin.com/in/brendan-raykoff}{\underline{linkedin.com/in/brendan-raykoff}} $|$
     \href{https://github.com/braykoff}{\underline{github.com/braykoff}}
 \end{center}
@@ -131,6 +134,14 @@
 %-----------EXPERIENCE-----------
 \section{Experience}
    \resumeSubHeadingListStart
+   
+   \resumeSubheading
+      {Space Technologies and Rocketry Team}{Berkeley, CA}
+      {Propulsion Member}{September 2026 -- Present}
+      \resumeItemListStart
+        \resumeItem{Designing pintle injector for regeneratively cooled LOX/ethanol liquid rocket engine}
+        \resumeItem{Used NASA CEA to determine O/F ratio for injector sizing; modeling geometry in OnShape}
+      \resumeItemListEnd
 
     \resumeSubheading
       {The Daily Californian}{Berkeley, CA}
@@ -140,20 +151,6 @@
         \resumeItem{Planning the news site's migration to Ghost Pro, including a redesigned layout}
         \resumeItem{Analyzed traffic in GA4 and Cloudflare to separate bot activity from legitimate spikes in data shared with advertisers, and investigated ways to prevent malicious bot traffic}
         \resumeItem{In the process of developing the organization's first iOS and Android apps}
-      \resumeItemListEnd
-      
-     %\resumeSubSubheading
-      %{Data Training Manager}{July. 2026 -- Present}
-      %\resumeItemListStart
-        %\resumeItem{Led training sessions }
-        %\resumeItem{Maintained the website codebase using JavaScript and React}
-      %\resumeItemListEnd
-
-    \resumeSubSubheading
-      {Data Developer}{Feb. 2026 -- July 2026}
-      \resumeItemListStart
-        \resumeItem{Collaborated with news reporters to process complex datasets into publication-ready visualizations using Python and build custom layouts with JavaScript}
-        \resumeItem{Maintained the website codebase using JavaScript, Node.js, and React}
       \resumeItemListEnd
 
       \resumeSubheading
@@ -202,10 +199,10 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Programming}{: Python, MATLAB, Java, JavaScript/TypeScript, HTML/CSS} \\
+     \textbf{Programming}{: Python, MATLAB, Java, C++, JavaScript/TypeScript, HTML/CSS} \\
 \textbf{Controls \& Autonomy}{: PID control, Kalman filtering, localization, motion profiling} \\
 \textbf{Data \& Machine Learning}{: NumPy, pandas, Matplotlib, scikit-learn, Random Forest modeling, LangChain, Excel} \\
-\textbf{Engineering}{: Fusion 360, Onshape, 3D printing, CNC machining } \\
+\textbf{Engineering}{: Fusion 360, Onshape, SolidWorks, 3D printing, CNC machining } \\
 \textbf{Systems \& Web}{: Linux, Git, Docker, Cloudflare, React, Node.js, Flask}
     }}
  \end{itemize}

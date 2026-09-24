@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Compile resume.tex to PDF and render each page as a PNG under rendered/.
+"""Compile resume.tex to PDF with secret-latex and render each page as a PNG.
 
-Also rewrites the "Resume Preview" section at the bottom of README.md to
+Pages are written under rendered/. Also rewrites the "Resume Preview" section at the bottom of README.md to
 show one image per rendered page.
 """
 from __future__ import annotations
@@ -24,13 +24,17 @@ PAGE_PREFIX = "page_"
 def compile_pdf(tex_file: Path, out_dir: Path) -> Path:
     subprocess.run(
         [
-            "pdflatex",
-            "-interaction=nonstopmode",
-            "-halt-on-error",
-            f"-output-directory={out_dir}",
-            str(tex_file),
+            "secret-latex",
+            "build",
+            tex_file.name,
+            "--root",
+            str(tex_file.parent),
+            "--output-dir",
+            str(out_dir),
+            "--engine-arg=-interaction=nonstopmode",
+            "--engine-arg=-halt-on-error",
+            "--secrets-file=none" # Do not use any secrets file
         ],
-        cwd=tex_file.parent,
         check=True,
         stdout=subprocess.DEVNULL,
     )
