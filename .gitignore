@@ -21,6 +21,8 @@
 *.auxlock
 *.pdf
 
+coverletters/
+
 # Python compiled files
 __pycache__/
 *.py[cod]
